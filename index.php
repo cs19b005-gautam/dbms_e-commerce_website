@@ -4,24 +4,15 @@
 ?>
 
         <?php
-            //include banner template file
-            include('Templates/_banner-area.php');
-        ?>
+                    //include banner template file
+                    include('Templates/_banner-area.php');
+                    //include banner template file
+                include('Templates/_top-sale.php');
 
-
-        <?php
-        //include banner template file
-        include('Templates/_top-sale.php');
-        ?>
-
-        <?php
-        //include special price file
-        include('Templates/_special-price.php');
-        ?>
-
-        <?php
-        //include special price file
-        include('Templates/_special-price.php');
+                //include special price file
+                include('Templates/_special-price.php');
+                //include special price file
+                include('Templates/_new-products.php');
         ?>
 
 <?php
