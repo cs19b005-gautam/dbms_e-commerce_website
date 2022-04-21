@@ -3,6 +3,14 @@
 
 <?php
 shuffle($product_shuffle);
+
+if($_SERVER['REQUEST_METHOD']=="POST"){
+    // calling method add to cart
+    if(isset($_POST['new_products_submit'])){
+        $cart->addToCart($_POST['user_id'], $_POST['item_id']);
+    }
+}
+
 ?>
 
 <br><br>
@@ -17,7 +25,7 @@ shuffle($product_shuffle);
             <?php foreach ($product_shuffle as $item){ ?>
                 <div class="item py-2 bg-light">
                     <div class="product font-rale">
-                        <a href="#"><img src="<?php echo $item["item_image"]??"./assets/products/1.png"; ?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?item_id=%s', 'product.php', $item['item_id']);?>"><img src="<?php echo $item["item_image"]??"./assets/products/1.png"; ?>" alt="product1" class="img-fluid"></a>
                         <div class="text-center">
                             <h6><?php echo $item["item_name"]??"Unknown"; ?></h6>
                             <div class="rating text-warning font-size-12">
@@ -30,149 +38,16 @@ shuffle($product_shuffle);
                             <div class="price py-2">
                                 <span><?php echo $item["item_price"]??'0';?></span>
                             </div>
-                            <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                            <form method="post">
+                                <input type="hidden" name="item_id" value="<?php echo $item["item_id"]??'1';?>">
+                                <input type="hidden" name="user_id" value="<?php echo 1;?>">
+                                <button type="submit" name="new_products_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             <?php }?>
 
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
-                    <div class="text-center">
-                        <h6>Samsung Galaxy 10</h6>
-                        <div class="rating text-warning font-size-12">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
-                        <div class="price py-2">
-                            <span>152/-</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <a href="#"><img src="./assets/products/2.png" alt="product1" class="img-fluid"></a>
-                    <div class="text-center">
-                        <h6>Readme Note 7</h6>
-                        <div class="rating text-warning font-size-12">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
-                        <div class="price py-2">
-                            <span>152/-</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <a href="#"><img src="./assets/products/3.png" alt="product1" class="img-fluid"></a>
-                    <div class="text-center">
-                        <h6>Readme Note 7</h6>
-                        <div class="rating text-warning font-size-12">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
-                        <div class="price py-2">
-                            <span>152/-</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <a href="#"><img src="./assets/products/6.png" alt="product1" class="img-fluid"></a>
-                    <div class="text-center">
-                        <h6>Samsung Galaxy 10</h6>
-                        <div class="rating text-warning font-size-12">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
-                        <div class="price py-2">
-                            <span>152/-</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <a href="#"><img src="./assets/products/1.png" alt="product1" class="img-fluid"></a>
-                    <div class="text-center">
-                        <h6>Readme Note 7</h6>
-                        <div class="rating text-warning font-size-12">
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="fas fa-star"></i></span>
-                            <span><i class="far fa-star"></i></span>
-                        </div>
-                        <div class="price py-2">
-                            <span>152/-</span>
-                        </div>
-                        <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <div class="d-flex flex-column">
-                        <a href="#"><img src="./assets/products/1.png" class="img-fluid" alt="pro1"></a>
-                        <div class="text-center">
-                            <h6>Readme Note 7</h6>
-                            <div class="rating text-warning font-size-12">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                            <div class="price py-2">
-                                <span>122/-</span>
-                            </div>
-                            <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item py-2 bg-light">
-                <div class="product font-rale">
-                    <div class="d-flex flex-column">
-                        <a href="#"><img src="./assets/products/2.png" class="img-fluid" alt="pro1"></a>
-                        <div class="text-center">
-                            <h6>Readme Note 7</h6>
-                            <div class="rating text-warning font-size-12">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                            <div class="price py-2">
-                                <span>122/-</span>
-                            </div>
-                            <button type="submit" class="btn btn-warning font-size-12">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <!-- !owl carousel -->
 

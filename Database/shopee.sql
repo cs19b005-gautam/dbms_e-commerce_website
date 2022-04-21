@@ -91,6 +91,10 @@ INSERT INTO `user` (`user_id`, `first_name`, `last_name`, `register_date`) VALUE
 
 -- --------------------------------------------------------
 
+INSERT INTO `cart` (`cart_id`, `user_id`, `item_id`) VALUES
+                                                        (10, 11, 12);
+
+
 --
 -- Table structure for table `wishlist`
 --
