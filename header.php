@@ -21,7 +21,15 @@
     <?php
         require('functions.php');
     ?>
+    <style>
+        /* search */
 
+    #form{
+        padding-left: 120px;
+        /* padding-right: -100px; */
+        padding-top: 5px;
+    }
+    </style>
 </head>
 <body>
 
@@ -30,7 +38,7 @@
     <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
         <p class="font-rale font-size-12 text-black-50 m-0">Welcome to Shopee!!</p>
         <div class="font-rale font-size-14">
-            <a href="#" class="px-3 border-right border-left text-dark">Login</a>
+            <a href="login_form.php" class="px-3 border-right border-left text-dark">Login</a>
             <a href="#" class="px-3 border-right text-dark">Whishlist(0)</a>
         </div>
     </div>
@@ -46,21 +54,21 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">On Sale</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Category</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="#">Products <i class="fas fa-chevron-down"></i></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
+                
                 <li class="nav-item">
                     <a class="nav-link" href="#">Category <i class="fas fa-chevron-down"></i></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Coming Soon</a>
-                </li>
+                
+               <div id="form">
+                    <form method="get" action="search.html" enctype="multipart/form-data">
+                      <input type="text" name="user_query" placeholder="Search a product" />
+                      <input type="submit" name="search" value="Search" />
+                    </form>
+                  </div>
             </ul>
             <form action="#" class="font-size-14 font-rale">
                 <a href="#" class="py-2 rounded-pill color-primary-bg">
