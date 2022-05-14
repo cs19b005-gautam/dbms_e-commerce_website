@@ -55,7 +55,7 @@ $(document).ready(function(){
     });
 
     // blogs owl carousel
-    $("#blogs .owl-carousel.owlCarousel")({
+    $("#blogs .owl-carousel").owlCarousel({
         loop: true,
         nav: true,
         dots: true,

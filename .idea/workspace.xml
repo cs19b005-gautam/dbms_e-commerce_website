@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0663c104-4db7-41aa-811e-3122a288b106" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML Template/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML Template/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +16,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2834YLHmNAlofpY6ldNLCwB3Ww2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/6th Sem/DBMS/E Commerce/Shopee",
+    "last_opened_file_path": "C:/xampp/htdocs/ecoomerce",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -38,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650431984094</updated>
       <workItem from="1650431985863" duration="100000" />
+      <workItem from="1652503624785" duration="505000" />
     </task>
     <servers />
   </component>
