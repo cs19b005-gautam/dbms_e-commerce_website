@@ -9,6 +9,6 @@ $product = new Product($db);
 
 if(isset($_POST['itemid'])){
     $result = $product->getProduct($_POST['itemid']);
-    echo ($result);
+    echo json_encode($result);
 }
 

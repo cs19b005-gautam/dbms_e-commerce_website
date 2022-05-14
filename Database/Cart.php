@@ -71,7 +71,7 @@ public function deleteItem($itemid=null,$table='cart')
         $result=$this->db->con->query(" DELETE FROM {$table} WHERE item_id={$itemid}");
              if($result)
      {
-         header("Location",$_SERVER['PHP_SELF']);
+        //  header("Location",$_SERVER['PHP_SELF']);
      }
      return $result;  
     }
@@ -89,6 +89,26 @@ public function getSum($arr)
     return sprintf("%.2f",$sum);
     }
 }
+
+//dleting from cart and adding it to whilist tables
+ public function saveForLater($item_id=null,$saveTable='wishlist',$fromTable='cart'){
+     if($item_id!=null)
+     {
+       $query=" INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE item_id={$item_id}; ";
+       $query .="DELETE FROM {$fromTable} WHERE item_id={$item_id};";
+    //    $result =$this->db->con->query(" INSERT INTO {$saveTable} SELECT * FROM {$fromTable} WHERE item_id={$item_id} ;");
+       $result =$this->db->con->multi_query($query);
+       if($result)
+       {
+        //    header("Location:",$_SERVER['PHP_SELF']);
+       }
+       return $result;
+     }
+ }
+
+
+
+
 
 }
 
