@@ -76,6 +76,12 @@ $(document).ready(function(){
  
      // click on qty up button
      $qty_up.click(function(e){
+         //change product price eusing ajax
+         $.ajax({uri:"Template/ajax.php",type:'post',data:{itemid:$(this).data("id") },success:function(result){
+                console.log(result);
+            //  let obj=JSON.parse(result);
+              //console.log(obj);
+         }})
          let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
          if($input.val() >= 1 && $input.val() <= 9){
              $input.val(function(i, oldval){
