@@ -4,9 +4,9 @@ session_start();
 
 include("includes/db.php");
 
-if(!isset($_SESSION['admin_email'])){
+if(!isset($_SESSION['admin_name'])){
 
-echo "<script>window.open('login.php','_self')</script>";
+echo "<script>window.open('login_form.php','_self')</script>";
 
 }
 
@@ -19,29 +19,7 @@ else {
 
 <?php
 
-$admin_session = $_SESSION['admin_email'];
 
-$get_admin = "select * from admins  where admin_email='$admin_session'";
-
-$run_admin = mysqli_query($con,$get_admin);
-
-$row_admin = mysqli_fetch_array($run_admin);
-
-$admin_id = $row_admin['admin_id'];
-
-$admin_name = $row_admin['admin_name'];
-
-$admin_email = $row_admin['admin_email'];
-
-$admin_image = $row_admin['admin_image'];
-
-$admin_country = $row_admin['admin_country'];
-
-$admin_job = $row_admin['admin_job'];
-
-$admin_contact = $row_admin['admin_contact'];
-
-$admin_about = $row_admin['admin_about'];
 
 
 $get_products = "SELECT * FROM products";
@@ -307,29 +285,6 @@ include("edit_box.php");
 
 }
 
-if(isset($_GET['insert_term'])){
-
-include("insert_term.php");
-
-}
-
-if(isset($_GET['view_terms'])){
-
-include("view_terms.php");
-
-}
-
-if(isset($_GET['delete_term'])){
-
-include("delete_term.php");
-
-}
-
-if(isset($_GET['edit_term'])){
-
-include("edit_term.php");
-
-}
 
 if(isset($_GET['edit_css'])){
 
@@ -497,13 +452,6 @@ include("edit_enquiry.php");
 }
 
 
-if(isset($_GET['edit_about_us'])){
-
-include("edit_about_us.php");
-
-}
-
-
 if(isset($_GET['insert_store'])){
 
 include("insert_store.php");
@@ -527,6 +475,13 @@ if(isset($_GET['edit_store'])){
 include("edit_store.php");
 
 }
+
+// if(isset($_GET['logout'])){
+
+//     include("logout.php");
+    
+//     }
+
 
 ?>
 

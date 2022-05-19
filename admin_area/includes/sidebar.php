@@ -1,9 +1,9 @@
 <?php
 
 
-if(!isset($_SESSION['admin_email'])){
+if(!isset($_SESSION['admin_name'])){
 
-echo "<script>window.open('login.php','_self')</script>";
+echo "<script>window.open('index.php','_self')</script>";
 
 }
 
@@ -45,7 +45,7 @@ else {
 
 <i class="fa fa-user" ></i>
 
-<?php echo $admin_name; ?> <b class="caret" ></b>
+<?php echo $_SESSION['admin_name'] ?><b class="caret" ></b>
 
 
 </a><!-- dropdown-toggle Ends -->
@@ -360,15 +360,6 @@ else {
 
 </li><!-- contact us li Ends -->
 
-<li><!-- about us li Starts -->
-
-<a href="index.php?edit_about_us">
-
-<i class="fa fa-fw fa-edit"></i> Edit About Us Page
-
-</a>
-
-</li><!-- about us li Ends -->
 
 
 <li><!-- Coupons Section li Starts -->
@@ -395,32 +386,6 @@ else {
 
 </li><!-- Coupons Section li Ends -->
 
-
-
-<li><!-- terms li Starts -->
-
-<a href="#" data-toggle="collapse" data-target="#terms" ><!-- anchor Starts -->
-
-<i class="fa fa-fw fa-table"></i> Terms
-
-<i class="fa fa-fw fa-caret-down"></i>
-
-</a><!-- anchor Ends -->
-
-<ul id="terms" class="collapse"><!-- ul collapse Starts -->
-
-<li>
-<a href="index.php?insert_term"> Insert Terms </a> 
-</li>
-
-<li>
-<a href="index.php?view_terms"> View Terms </a> 
-</li>
-
-</ul><!-- ul collapse Ends -->
-
-
-</li><!-- terms li Ends -->
 
 
 
