@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0663c104-4db7-41aa-811e-3122a288b106" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Templates/notFound/_wishlist_notFound.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML Template/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/HTML Template/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/cart.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +30,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/ecoomerce",
+    "last_opened_file_path": "C:/xampp/htdocs/ecommerce",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -43,10 +44,22 @@
       <updated>1650431984094</updated>
       <workItem from="1650431985863" duration="100000" />
       <workItem from="1652503624785" duration="505000" />
+      <workItem from="1652958187418" duration="1280000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
