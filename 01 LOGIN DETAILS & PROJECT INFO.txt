@@ -10,5 +10,5 @@
 
 **Admin Login Details**
 
-Username: admin@mail.com
-Password: Password@123
+Username: yash@gmail.com
+Password: yash@123
