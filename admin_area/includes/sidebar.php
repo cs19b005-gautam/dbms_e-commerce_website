@@ -1,9 +1,9 @@
 <?php
 
 
-if(!isset($_SESSION['admin_name'])){
+if(!isset($_SESSION['admin_email'])){
 
-echo "<script>window.open('index.php','_self')</script>";
+echo "<script>window.open('login.php','_self')</script>";
 
 }
 
@@ -45,7 +45,7 @@ else {
 
 <i class="fa fa-user" ></i>
 
-<?php echo $_SESSION['admin_name'] ?><b class="caret" ></b>
+<?php echo $admin_name; ?> <b class="caret" ></b>
 
 
 </a><!-- dropdown-toggle Ends -->
@@ -300,32 +300,6 @@ else {
 </li><!-- li Ends -->
 
 
-
-<li><!-- store section li Starts -->
-
-<a href="#" data-toggle="collapse" data-target="#store">
-
-<i class="fa fa-fw fa-briefcase"></i> Stores
-
-<i class="fa fa-fw fa-caret-down"></i>
-
-</a>
-
-<ul id="store" class="collapse">
-
-<li>
-<a href="index.php?insert_store"> Insert store </a>
-</li>
-
-<li>
-<a href="index.php?view_store"> View store </a>
-</li>
-
-</ul>
-
-</li><!-- store section li Ends -->
-
-
 <li><!-- contact us li Starts -->
 
 <a href="#" data-toggle="collapse" data-target="#contact_us"><!-- anchor Starts -->
@@ -360,6 +334,15 @@ else {
 
 </li><!-- contact us li Ends -->
 
+<li><!-- about us li Starts -->
+
+<a href="index.php?edit_about_us">
+
+<i class="fa fa-fw fa-edit"></i> Edit About Us Page
+
+</a>
+
+</li><!-- about us li Ends -->
 
 
 <li><!-- Coupons Section li Starts -->
@@ -385,8 +368,6 @@ else {
 </ul><!-- ul collapse Ends -->
 
 </li><!-- Coupons Section li Ends -->
-
-
 
 
 <li>

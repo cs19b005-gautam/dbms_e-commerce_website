@@ -1,0 +1,76 @@
+
+body{
+
+    padding-top:10%;
+    background-color: #333;
+    }
+    
+    
+    .form-login {
+    max-width:350px;
+    padding:40px;
+    border-radius:30px;
+    background:#e9e9e9;
+    margin:0 auto;
+    
+    }
+    
+    
+    .form-login .form-login-heading{
+    color:crimson;
+    text-align:center;
+    
+    }
+    
+    .form-login .form-control {
+    position:relative;
+    height:auto;
+    box-sizing:border-box;
+    padding:10px;
+    font-size:16px;
+    
+    }
+    
+    .form-login input[type="text"] {
+        width: 100%;
+        padding:10px 15px;
+        border-radius:25px;
+        margin:8px 0;
+        background:rgba(0,0,0,.1);
+        color: #fff;
+    
+    }
+    
+    .form-login input[type="password"] {
+        width: 100%;
+        padding:10px 15px;
+        border-radius:25px;
+        margin:8px 0;
+        background:rgba(0,0,0,.1);
+        color: #fff;
+    
+    
+    }
+
+
+    .container form{
+        padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background:rgba(40,57,101,.6);
+   text-align: center;
+   width: 500px;
+     }
+
+    .container form .form-btn{
+    background: #fbd0d9;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+    }
+
+    .container form .form-btn:hover{
+        background: crimson;
+        color:#fff;
+     }

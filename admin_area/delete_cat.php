@@ -1,8 +1,8 @@
 <?php
 
-if(!isset($_SESSION['admin_name'])){
+if(!isset($_SESSION['admin_email'])){
 
-echo "<script>window.open('login_form.php','_self')</script>";
+echo "<script>window.open('login.php','_self')</script>";
 
 }
 
