@@ -4,11 +4,11 @@
     background-color: #4CAF50;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 7px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   }
   </style>
 <?php
