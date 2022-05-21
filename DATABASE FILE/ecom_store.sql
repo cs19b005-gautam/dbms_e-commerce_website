@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2022 at 04:58 PM
+-- Generation Time: May 21, 2022 at 06:29 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -93,6 +93,13 @@ CREATE TABLE `cart` (
   `size` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
+(14, '::1', 2, '65', 'Medium');
+
 -- --------------------------------------------------------
 
 --
@@ -158,7 +165,7 @@ CREATE TABLE `coupons` (
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
 (5, 8, 'Sale', '10', 'CASTRO', 2, 1),
-(6, 14, 'Sale', '65', 'CODEASTRO', 3, 1);
+(6, 14, 'Sale', '65', 'CODEASTRO', 3, 2);
 
 -- --------------------------------------------------------
 
@@ -185,11 +192,7 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
-(2, 'user', 'user@ave.com', '123', 'United State', 'New York', '0092334566931', 'new york', 'user.jpg', '::1', ''),
-(3, 'Demo Customer', 'demo@customer.com', 'Password123', 'DemoCountry', 'DemoCity', '700000000', 'DemoAddress', 'sample_image.jpg', '::1', ''),
-(4, 'Thomas', 'thomas@demo.com', 'Password123', 'One Country', 'One City', '777777777', '111 Address', 'sample_img360.png', '::1', '1427053935'),
-(5, 'Fracis', 'test@customer.com', 'Password123', 'US', 'Demo City', '780000000', '112 Bleck Street', 'userav-min.png', '::1', '1634138674'),
-(6, 'Sample Customer', 'customer@mail.com', 'Password123', 'Sample Country', 'Sample City', '7800000000', 'Sample Address', 'user-icn-min.png', '::1', '174829126');
+(7, 'yaswanth', 'yaswanth@gmail.com', 'yaswanth@27', 'India', 'Nellore', '1234567891', 'ap', 'user-profile-min.png', '::1', '661562866');
 
 -- --------------------------------------------------------
 
@@ -213,15 +216,7 @@ CREATE TABLE `customer_orders` (
 --
 
 INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
-(17, 2, 100, 1715523401, 2, 'Large', '2017-02-20 08:21:42', 'pending'),
-(23, 3, 20, 1762810884, 1, 'Medium', '2021-09-14 08:35:57', 'Complete'),
-(24, 4, 100, 1972602052, 1, 'Large', '2021-09-14 16:37:52', 'Complete'),
-(25, 4, 90, 2008540778, 1, 'Medium', '2021-09-14 16:43:15', 'pending'),
-(27, 5, 120, 2138906686, 1, 'Small', '2021-09-15 03:18:41', 'Complete'),
-(28, 5, 180, 361540113, 2, 'Medium', '2021-09-15 03:25:42', 'Complete'),
-(29, 3, 100, 858195683, 1, 'Large', '2021-09-15 03:14:01', 'Complete'),
-(31, 6, 245, 901707655, 1, 'Medium', '2021-09-15 03:52:18', 'Complete'),
-(32, 6, 75, 2125554712, 1, 'Large', '2021-09-15 03:52:58', 'pending');
+(33, 7, 240, 1204237108, 2, 'Medium', '2022-05-21 15:27:26', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -290,21 +285,7 @@ CREATE TABLE `payments` (
 --
 
 INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `ref_no`, `code`, `payment_date`) VALUES
-(2, 1607603019, 447, 'UBL/Omni', 5678, 33, '11/1/2016'),
-(3, 314788500, 345, 'UBL/Omni', 443, 865, '11/1/2016'),
-(4, 6906, 400, 'Western Union', 101025780, 696950, 'January 1'),
-(5, 10023, 20, 'Bank Code', 1000010101, 6969, '09/14/2021'),
-(6, 69088, 100, 'Bank Code', 1010101022, 88669, '09/14/2021'),
-(7, 1835758347, 480, 'Western Union', 1785002101, 66990, '09-04-2021'),
-(8, 1835758347, 480, 'Bank Code', 1012125550, 66500, '09-14-2021'),
-(9, 1144520, 480, 'Bank Code', 1025000020, 66990, '09-14-2021'),
-(10, 2145000000, 480, 'Bank Code', 2147483647, 66580, '09-14-2021'),
-(20, 858195683, 100, 'Bank Code', 1400256000, 47850, '09-13-2021'),
-(21, 2138906686, 120, 'Bank Code', 1455000020, 202020, '09-13-2021'),
-(22, 2138906686, 120, 'Bank Code', 1450000020, 202020, '09-15-2021'),
-(23, 361540113, 180, 'Western Union', 1470000020, 12001, '09-15-2021'),
-(24, 361540113, 180, 'UBL/Omni', 1258886650, 200, '09-15-2021'),
-(25, 901707655, 245, 'Western Union', 1200002588, 88850, '09-15-2021');
+(26, 12324465, 240, 'Bank Code', 0, 34546, '21-05-2022');
 
 -- --------------------------------------------------------
 
@@ -327,15 +308,7 @@ CREATE TABLE `pending_orders` (
 --
 
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
-(17, 2, 1715523401, '9', 2, 'Large', 'pending'),
-(23, 3, 1762810884, '12', 1, 'Medium', 'Complete'),
-(24, 4, 1972602052, '5', 1, 'Large', 'Complete'),
-(25, 4, 2008540778, '13', 1, 'Medium', 'pending'),
-(27, 5, 2138906686, '14', 1, 'Small', 'Complete'),
-(28, 5, 361540113, '13', 2, 'Medium', 'Complete'),
-(29, 3, 858195683, '5', 1, 'Large', 'Complete'),
-(31, 6, 901707655, '8', 1, 'Medium', 'Complete'),
-(32, 6, 2125554712, '15', 1, 'Large', 'pending');
+(33, 7, 1204237108, '16', 2, 'Medium', 'Complete');
 
 -- --------------------------------------------------------
 
@@ -376,7 +349,7 @@ INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `manufacturer_id`, `
 (13, 9, 2, 3, '2022-05-21 12:40:39', 'Nike Sportswear Essential Collection', 'nike-sportswear-essen-col', 'nike-s.jpg', 'nike-s2.jpg', 'nike-s02.jpg', 90, 85, '\r\n\r\nThis is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text. This is a sample text.\r\n\r\n\r\n\r\n', '\r\n\r\n\r\nThis is a sample text. This is a sample text. This is a sample text.This is a sample text. This is a sample text. This is a sample text.This is a sample text. This is a sample text. This is a sample text.This is a sample text. This is a sample text. This is a sample text.\r\n\r\n', '\r\n\r\n\r\nThis is a sample text. This is a sample text. This is a sample text.\r\n\r\n\r\n', 'nike sportswear', 'Featured', 'product'),
 (14, 5, 5, 7, '2022-05-21 12:13:47', 'US POLO T-shirt', 'us-polo', 'us1.jpg', 'us2.jpg', 'us3.jpg', 120, 111, '\r\nThis is a demo. This is a demo. This is a demo. This is a demo.\r\n\r\n\r\n', '\r\n\r\n\r\nThis is a demo.\r\n', '\r\n\r\n\r\nThis is a demo.\r\n', 'demo test product', 'Sale', 'product'),
 (15, 5, 5, 8, '2022-05-21 13:05:50', 'Oxford Shirt', 'Oxford-Shirt', 'shirt1.jpg', 'shirt2.jpg', 'shirt3.jpg', 88, 75, '\r\nTHIS IS A DEMO DESCRIPTION\r\n', '\r\n\r\nDEMO FEATURES\r\n\r\n', '\r\n\r\n\r\n\r\n', 'shirt', 'Sale', 'bundle'),
-(16, 2, 5, 9, '2022-05-21 13:06:33', 'Men’s Adaptive Sleeve', 'tommy-hilfiger', 'tommy1.jpg', 'tommy2.jpg', 'tommy3.jpg', 80, 120, 'Tommy Hilfiger', 'Tommy Hilfiger', '', 'tommy , polo', 'Sale', 'product');
+(16, 5, 5, 9, '2022-05-21 16:28:32', 'Men’s Adaptive Sleeve', 'tommy-hilfiger', 'tommy1.jpg', 'tommy2.jpg', 'tommy3.jpg', 80, 120, 'Tommy Hilfiger', 'Tommy Hilfiger', '', 'tommy , polo', 'Sale', 'product');
 
 -- --------------------------------------------------------
 
@@ -569,13 +542,13 @@ ALTER TABLE `coupons`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `enquiry_types`
@@ -593,13 +566,13 @@ ALTER TABLE `manufacturers`
 -- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `payment_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `products`
